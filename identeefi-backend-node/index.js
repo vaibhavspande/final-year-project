@@ -1,9 +1,9 @@
 const express = require('express');
 const cors = require('cors');
-const bodyParser = require('body-parser');   
+const bodyParser = require('body-parser');     
 const { Client } = require('pg')
 const path = require('path');
-const multer = require('multer');
+const multer = require('multer');   
 require('dotenv').config();
 
 
@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const server = process.env.SERVER;
-
+ 
 const client = new Client({
     host: process.env.HOST,
     user: process.env.USER,
@@ -22,7 +22,7 @@ const client = new Client({
     database: process.env.DATABASE
 })
 
-client.connect()
+client.connect()            
 
 // auth  
 

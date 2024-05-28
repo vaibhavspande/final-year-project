@@ -31,7 +31,7 @@ const ManageAccount = () => {
     }, []);
 
     const handleData = async (e) => {
-        const res = await axios.get('http://localhost:5000/profileAll')
+        const res = await axios.get('https://final-year-project-backend-henna.vercel.app/profileAll')
             .then(res => {
                 console.log(JSON.stringify(res.data));
                 setRows(res.data);

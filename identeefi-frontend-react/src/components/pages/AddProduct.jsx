@@ -152,7 +152,7 @@ const AddProduct = () => {
     }
 
     const getUsername = async (e) => {
-        const res = await axios.get(`http://localhost:5000/profile/${auth.user}`)
+        const res = await axios.get(`https://final-year-project-backend-henna.vercel.app/profile/${auth.user}`)
             .then(res => {
                 console.log(JSON.stringify(res?.data[0]));
                 setManuName(res?.data[0].name);
@@ -166,7 +166,7 @@ const AddProduct = () => {
         const data = new FormData();
         data.append("image", image.file);
 
-        axios.post("http://localhost:5000/upload/product", data, {
+        axios.post("https://final-year-project-backend-henna.vercel.app/upload/product", data, {
             headers: { "Content-Type": "multipart/form-data" }
         }).then(res => {
             console.log(res);
@@ -230,7 +230,7 @@ const AddProduct = () => {
                 "brand": brand,
               });
 
-            const res = await axios.post('http://localhost:5000/addproduct', profileData,
+            const res = await axios.post('https://final-year-project-backend-henna.vercel.app/addproduct', profileData,
                 {
                     headers: {'Content-Type': 'application/json'},
                 });
@@ -245,7 +245,7 @@ const AddProduct = () => {
     }
 
     const checkUnique = async () => {
-        const res = await axios.get("http://localhost:5000/product/serialNumber");
+        const res = await axios.get("https://final-year-project-backend-henna.vercel.app/product/serialNumber");
 
         const existingSerialNumbers = res.data.map((product) => product.serialnumber);
         existingSerialNumbers.push(serialNumber);
