@@ -32,8 +32,8 @@ function createAccount(username, password, role) {
             console.log(err.message);
         } else {
             console.log('Data insert successful');
-        }  
-    })
+        }    
+    })  
 }
   
 function changePassword(username, password) {
