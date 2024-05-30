@@ -97,7 +97,7 @@ const AddAccount = () => {
             
             console.log(JSON.stringify(res.data));
 
-            const res2 = await axios.post('final-year-project-backend-henna.vercel.app/addprofile', profileData,
+            const res2 = await axios.post('https://final-year-project-backend-henna.vercel.app/addprofile', profileData,
                 {
                     headers: {'Content-Type': 'application/json'},
                 });
